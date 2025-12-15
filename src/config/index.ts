@@ -6,8 +6,8 @@ export const siteConfig = {
   links: {
     nextjs: "https://nextjs.org",
     shadcn: "https://ui.shadcn.com",
-    github: "https://github.com", // Add your GitHub
-    linkedin: "https://linkedin.com", // Add your LinkedIn
-    twitter: "https://twitter.com", // Add your Twitter
+    github: "https://github.com/Mohammad-Zafari",
+    linkedin: "https://www.linkedin.com/in/mohammad-zafari-0b417b2b4",
+    email: "my.mohammad.zafari@gmail.com",
   },
 } as const

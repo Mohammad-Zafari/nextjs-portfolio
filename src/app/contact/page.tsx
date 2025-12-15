@@ -11,8 +11,8 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "hello@example.com",
-    href: "mailto:hello@example.com",
+    value: "my.mohammad.zafari@gmail.com",
+    href: "mailto:my.mohammad.zafari@gmail.com",
   },
   {
     icon: MapPin,
@@ -32,13 +32,13 @@ export default function ContactPage() {
       <div className="container-tight">
         {/* Header */}
         <div className="mb-16 max-w-2xl">
-          <p className="text-primary mb-4 text-sm font-medium uppercase tracking-wider animate-in">
+          <p className="mb-4 text-sm font-medium uppercase tracking-wider text-primary animate-in">
             Contact
           </p>
           <h1 className="animate-in-delay-1 text-4xl font-bold sm:text-5xl md:text-6xl">
             Let's build something <span className="gradient-text">great together</span>
           </h1>
-          <p className="animate-in-delay-2 text-muted-foreground mt-6 text-lg">
+          <p className="animate-in-delay-2 mt-6 text-lg text-muted-foreground">
             Have a project in mind? I'd love to hear about it. Send me a message and I'll get back
             to you as soon as possible.
           </p>
@@ -51,15 +51,15 @@ export default function ContactPage() {
             <div className="space-y-6">
               {contactInfo.map((item) => (
                 <div key={item.label} className="flex items-start gap-4">
-                  <div className="bg-primary/10 text-primary rounded-xl p-3">
+                  <div className="rounded-xl bg-primary/10 p-3 text-primary">
                     <item.icon className="h-5 w-5" />
                   </div>
                   <div>
-                    <p className="text-muted-foreground text-sm">{item.label}</p>
+                    <p className="text-sm text-muted-foreground">{item.label}</p>
                     {item.href ? (
                       <a
                         href={item.href}
-                        className="hover:text-primary font-medium transition-colors"
+                        className="font-medium transition-colors hover:text-primary"
                       >
                         {item.value}
                       </a>
@@ -72,26 +72,26 @@ export default function ContactPage() {
             </div>
 
             {/* Quick links */}
-            <div className="bg-card rounded-2xl border p-6">
+            <div className="rounded-2xl border bg-card p-6">
               <h3 className="mb-4 font-semibold">Prefer another way?</h3>
               <div className="space-y-3">
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/in/mohammad-zafari-0b417b2b4"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-muted/50 hover:bg-muted flex items-center justify-between rounded-lg p-3 transition-colors"
+                  className="flex items-center justify-between rounded-lg bg-muted/50 p-3 transition-colors hover:bg-muted"
                 >
                   <span className="text-sm font-medium">LinkedIn</span>
-                  <ArrowUpRight className="text-muted-foreground h-4 w-4" />
+                  <ArrowUpRight className="h-4 w-4 text-muted-foreground" />
                 </a>
                 <a
-                  href="https://github.com"
+                  href="https://github.com/Mohammad-Zafari"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-muted/50 hover:bg-muted flex items-center justify-between rounded-lg p-3 transition-colors"
+                  className="flex items-center justify-between rounded-lg bg-muted/50 p-3 transition-colors hover:bg-muted"
                 >
                   <span className="text-sm font-medium">GitHub</span>
-                  <ArrowUpRight className="text-muted-foreground h-4 w-4" />
+                  <ArrowUpRight className="h-4 w-4 text-muted-foreground" />
                 </a>
               </div>
             </div>
@@ -99,7 +99,7 @@ export default function ContactPage() {
             {/* Tips */}
             <div className="rounded-2xl border border-dashed p-6">
               <h3 className="mb-3 font-semibold">What to include</h3>
-              <ul className="text-muted-foreground space-y-2 text-sm">
+              <ul className="space-y-2 text-sm text-muted-foreground">
                 <li>• Brief project description</li>
                 <li>• Timeline & budget (if available)</li>
                 <li>• Any specific requirements</li>
@@ -109,7 +109,7 @@ export default function ContactPage() {
 
           {/* Form */}
           <div className="lg:col-span-3">
-            <div className="bg-card rounded-2xl border p-6 md:p-8">
+            <div className="rounded-2xl border bg-card p-6 md:p-8">
               <h2 className="mb-6 text-xl font-semibold">Send a message</h2>
               <ContactForm />
             </div>

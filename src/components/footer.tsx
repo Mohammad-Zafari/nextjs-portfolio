@@ -5,18 +5,18 @@ export function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-card/50 border-t">
+    <footer className="border-t bg-card/50">
       <div className="container-tight py-12">
         <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
           {/* Logo and tagline */}
           <div className="text-center md:text-left">
             <Link
               href="/"
-              className="hover:text-primary text-xl font-bold tracking-tight transition-colors"
+              className="text-xl font-bold tracking-tight transition-colors hover:text-primary"
             >
-              portfolio<span className="text-primary">.</span>
+              moe portfolio<span className="text-primary">.</span>
             </Link>
-            <p className="text-muted-foreground mt-2 text-sm">
+            <p className="mt-2 text-sm text-muted-foreground">
               Building digital products that matter.
             </p>
           </div>
@@ -24,26 +24,26 @@ export function Footer() {
           {/* Social links */}
           <div className="flex items-center gap-1">
             <a
-              href="https://github.com"
+              href="https://github.com/Mohammad-Zafari"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted-foreground hover:bg-muted hover:text-foreground rounded-full p-2.5 transition-colors"
+              className="rounded-full p-2.5 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
               aria-label="GitHub"
             >
               <Github className="h-5 w-5" />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/mohammad-zafari-0b417b2b4"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted-foreground hover:bg-muted hover:text-foreground rounded-full p-2.5 transition-colors"
+              className="rounded-full p-2.5 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
               aria-label="LinkedIn"
             >
               <Linkedin className="h-5 w-5" />
             </a>
             <a
-              href="mailto:hello@example.com"
-              className="text-muted-foreground hover:bg-muted hover:text-foreground rounded-full p-2.5 transition-colors"
+              href="mailto:my.mohammad.zafari@gmail.com"
+              className="rounded-full p-2.5 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
               aria-label="Email"
             >
               <Mail className="h-5 w-5" />
@@ -53,14 +53,14 @@ export function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-8 flex flex-col items-center justify-between gap-4 border-t pt-8 md:flex-row">
-          <p className="text-muted-foreground text-sm">© {currentYear} All rights reserved.</p>
-          <p className="text-muted-foreground text-sm">
+          <p className="text-sm text-muted-foreground">© {currentYear} All rights reserved.</p>
+          <p className="text-sm text-muted-foreground">
             Built with{" "}
             <Link
               href="https://nextjs.org"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-foreground underline-offset-4 transition-colors hover:underline"
+              className="underline-offset-4 transition-colors hover:text-foreground hover:underline"
             >
               Next.js
             </Link>{" "}
@@ -69,7 +69,7 @@ export function Footer() {
               href="https://ui.shadcn.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-foreground underline-offset-4 transition-colors hover:underline"
+              className="underline-offset-4 transition-colors hover:text-foreground hover:underline"
             >
               shadcn/ui
             </Link>
