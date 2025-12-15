@@ -99,7 +99,7 @@ export function ContactForm() {
           <CheckCircle2 className="h-8 w-8 text-green-500" />
         </div>
         <h3 className="mb-2 text-xl font-semibold">Message sent!</h3>
-        <p className="text-muted-foreground mb-6">
+        <p className="mb-6 text-muted-foreground">
           Thanks for reaching out. I'll get back to you soon.
         </p>
         <Button variant="outline" onClick={() => setStatus("idle")}>
@@ -129,7 +129,7 @@ export function ContactForm() {
           aria-describedby={errors.name ? "name-error" : undefined}
         />
         {errors.name && (
-          <p id="name-error" className="text-destructive text-sm">
+          <p id="name-error" className="text-sm text-destructive">
             {errors.name}
           </p>
         )}
@@ -154,7 +154,7 @@ export function ContactForm() {
           aria-describedby={errors.email ? "email-error" : undefined}
         />
         {errors.email && (
-          <p id="email-error" className="text-destructive text-sm">
+          <p id="email-error" className="text-sm text-destructive">
             {errors.email}
           </p>
         )}
@@ -179,7 +179,7 @@ export function ContactForm() {
           aria-describedby={errors.message ? "message-error" : undefined}
         />
         {errors.message && (
-          <p id="message-error" className="text-destructive text-sm">
+          <p id="message-error" className="text-sm text-destructive">
             {errors.message}
           </p>
         )}
@@ -187,11 +187,11 @@ export function ContactForm() {
 
       {/* Error message */}
       {status === "error" && (
-        <div className="border-destructive/20 bg-destructive/5 flex items-start gap-3 rounded-xl border p-4">
-          <AlertCircle className="text-destructive mt-0.5 h-5 w-5 flex-shrink-0" />
+        <div className="flex items-start gap-3 rounded-xl border border-destructive/20 bg-destructive/5 p-4">
+          <AlertCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-destructive" />
           <div>
-            <p className="text-destructive font-medium">Failed to send</p>
-            <p className="text-destructive/80 text-sm">{errorMessage}</p>
+            <p className="font-medium text-destructive">Failed to send</p>
+            <p className="text-sm text-destructive/80">{errorMessage}</p>
           </div>
         </div>
       )}
