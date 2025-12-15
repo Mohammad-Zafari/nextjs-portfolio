@@ -81,7 +81,7 @@
 @layer utilities {
   /* Gradient text */
   .gradient-text {
-    @apply from-primary bg-gradient-to-r via-purple-500 to-pink-500 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-primary via-purple-500 to-pink-500 bg-clip-text text-transparent;
   }
 
   /* Glass effect */
@@ -96,7 +96,7 @@
 
   /* Subtle border glow */
   .border-glow {
-    @apply border-primary/20 border;
+    @apply border border-primary/20;
     box-shadow: 0 0 20px -5px hsl(var(--primary) / 0.15);
   }
 
@@ -147,7 +147,7 @@
 
   /* Focus ring */
   .focus-ring {
-    @apply focus-visible:ring-primary focus-visible:ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2;
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background;
   }
 
   /* Container with max width */
@@ -172,7 +172,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-muted-foreground/20 rounded-full;
+  @apply rounded-full bg-muted-foreground/20;
 }
 
 ::-webkit-scrollbar-thumb:hover {
