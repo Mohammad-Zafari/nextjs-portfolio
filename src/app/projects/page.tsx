@@ -13,13 +13,13 @@ export default function ProjectsPage() {
       <div className="container-tight">
         {/* Header */}
         <div className="mb-16">
-          <p className="text-primary mb-4 text-sm font-medium uppercase tracking-wider animate-in">
+          <p className="mb-4 text-sm font-medium uppercase tracking-wider text-primary animate-in">
             Portfolio
           </p>
           <h1 className="animate-in-delay-1 text-4xl font-bold sm:text-5xl md:text-6xl">
             Selected work
           </h1>
-          <p className="animate-in-delay-2 text-muted-foreground mt-4 max-w-xl text-lg">
+          <p className="animate-in-delay-2 mt-4 max-w-xl text-lg text-muted-foreground">
             A curated collection of projects that showcase my expertise in building scalable,
             user-focused applications.
           </p>
@@ -35,12 +35,12 @@ export default function ProjectsPage() {
         {/* Bottom CTA */}
         <div className="mt-16 rounded-2xl border border-dashed p-8 text-center md:p-12">
           <h2 className="text-xl font-bold md:text-2xl">Have a project in mind?</h2>
-          <p className="text-muted-foreground mt-2">
+          <p className="mt-2 text-muted-foreground">
             Let's discuss how I can help bring your ideas to life.
           </p>
           <a
             href="/contact"
-            className="bg-primary text-primary-foreground hover:bg-primary/90 mt-6 inline-flex h-11 items-center justify-center rounded-full px-6 text-sm font-medium transition-colors"
+            className="mt-6 inline-flex h-11 items-center justify-center rounded-full bg-primary px-6 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
           >
             Get in touch
           </a>

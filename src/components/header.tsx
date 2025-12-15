@@ -19,10 +19,10 @@ export function Header() {
         {/* Logo */}
         <Link
           href="/"
-          className="hover:text-primary text-xl font-bold tracking-tight transition-colors"
+          className="text-xl font-bold tracking-tight transition-colors hover:text-primary"
           aria-label="Home"
         >
-          portfolio<span className="text-primary">.</span>
+          moe portfolio<span className="text-primary">.</span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -40,7 +40,7 @@ export function Header() {
                 >
                   {item.name}
                   {isActive && (
-                    <span className="via-primary absolute inset-x-2 -bottom-px h-px bg-gradient-to-r from-transparent to-transparent" />
+                    <span className="absolute inset-x-2 -bottom-px h-px bg-gradient-to-r from-transparent via-primary to-transparent" />
                   )}
                 </Link>
               </li>
