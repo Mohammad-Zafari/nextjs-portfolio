@@ -167,7 +167,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
           <section className="rounded-2xl border border-dashed p-8 text-center md:p-12">
             <h2 className="text-xl font-bold md:text-2xl">Interested in working together?</h2>
             <p className="mt-2 text-muted-foreground">
-              Let's discuss how I can help with your next project.
+              Let&apos;s discuss how I can help with your next project.
             </p>
             <div className="mt-6 flex flex-wrap items-center justify-center gap-4">
               <Link

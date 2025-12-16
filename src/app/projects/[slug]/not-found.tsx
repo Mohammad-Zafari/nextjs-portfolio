@@ -7,7 +7,7 @@ export default function NotFound() {
         <p className="mb-4 text-sm font-medium uppercase tracking-wider text-primary">404</p>
         <h1 className="mb-4 text-4xl font-bold">Project not found</h1>
         <p className="mb-8 text-muted-foreground">
-          The project you're looking for doesn't exist or has been removed.
+          The project you&apos;re looking for doesn&apos;t exist or has been removed.
         </p>
         <Link
           href="/projects"

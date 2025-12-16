@@ -36,10 +36,10 @@ export default function ContactPage() {
             Contact
           </p>
           <h1 className="animate-in-delay-1 text-4xl font-bold sm:text-5xl md:text-6xl">
-            Let's build something <span className="gradient-text">great together</span>
+            Let&apos;s build something <span className="gradient-text">great together</span>
           </h1>
           <p className="animate-in-delay-2 mt-6 text-lg text-muted-foreground">
-            Have a project in mind? I'd love to hear about it. Send me a message and I'll get back
+            Have a project in mind? I&apos;d love to hear about it. Send me a message and I&apos;ll get back
             to you as soon as possible.
           </p>
         </div>

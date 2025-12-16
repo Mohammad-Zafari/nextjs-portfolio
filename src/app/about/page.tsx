@@ -57,7 +57,7 @@ export default function AboutPage() {
             Building digital products that <span className="gradient-text">make a difference</span>
           </h1>
           <p className="animate-in-delay-2 mt-6 text-lg leading-relaxed text-muted-foreground">
-            I'm a full-stack developer focused on creating production-ready SaaS applications. I
+            I&apos;m a full-stack developer focused on creating production-ready SaaS applications. I
             transform complex ideas into elegant, scalable solutions that drive business growth.
           </p>
         </div>
@@ -143,7 +143,7 @@ export default function AboutPage() {
         <section className="rounded-2xl border border-dashed p-8 text-center md:p-12">
           <h2 className="text-xl font-bold md:text-2xl">Ready to start your project?</h2>
           <p className="mt-2 text-muted-foreground">
-            Let's discuss how I can help bring your vision to life.
+            Let&apos;s discuss how I can help bring your vision to life.
           </p>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-4">
             <a

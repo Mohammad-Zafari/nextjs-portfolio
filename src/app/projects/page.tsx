@@ -36,7 +36,7 @@ export default function ProjectsPage() {
         <div className="mt-16 rounded-2xl border border-dashed p-8 text-center md:p-12">
           <h2 className="text-xl font-bold md:text-2xl">Have a project in mind?</h2>
           <p className="mt-2 text-muted-foreground">
-            Let's discuss how I can help bring your ideas to life.
+            Let&apos;s discuss how I can help bring your ideas to life.
           </p>
           <a
             href="/contact"
