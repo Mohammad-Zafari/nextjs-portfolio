@@ -23,9 +23,8 @@
  * @see https://supabase.com/docs/guides/auth/server-side/nextjs
  */
 
-// Re-export client and server functions
+// Re-export client functions only (server functions should be imported directly)
 export { createBrowserClient, isSupabaseConfigured as isSupabaseConfiguredClient } from "./supabase/client"
-export { createServerClient, isSupabaseConfigured as isSupabaseConfiguredServer } from "./supabase/server"
 
 // Type exports for convenience
 export type { SupabaseClient } from "@supabase/supabase-js"

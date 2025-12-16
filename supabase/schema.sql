@@ -80,11 +80,12 @@ CREATE POLICY "Public can view projects"
 -- Enable RLS on contact_messages table
 ALTER TABLE contact_messages ENABLE ROW LEVEL SECURITY;
 
--- Allow public insert access to contact_messages
+-- Allow anonymous and authenticated users to insert contact messages
+-- 'anon' is the role Supabase uses for unauthenticated requests
 CREATE POLICY "Public can insert contact messages"
   ON contact_messages
   FOR INSERT
-  TO public
+  TO anon, authenticated
   WITH CHECK (true);
 
 -- =============================================

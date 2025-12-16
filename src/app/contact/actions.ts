@@ -1,7 +1,7 @@
 "use server"
 
-import { createServerClient } from "@/lib/supabase/server"
 import type { ContactMessageInsert } from "@/types"
+import { sendContactEmail } from "@/lib/email"
 
 interface SubmitContactFormResult {
   success: boolean
@@ -45,8 +45,26 @@ export async function submitContactForm(
       return { success: false, error: "Message must be at least 10 characters" }
     }
 
-    // Create Supabase client
-    const supabase = createServerClient()
+    // Create Supabase client using dynamic import to avoid bundling issues
+    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
+    // Use service role key for server-side operations to bypass RLS
+    const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+
+    if (!supabaseUrl || !supabaseKey) {
+      return {
+        success: false,
+        error: "Server configuration error. Please contact me directly via email.",
+      }
+    }
+
+    // Dynamic import to prevent webpack from bundling Supabase for client
+    const { createClient } = await import("@supabase/supabase-js")
+    const supabase = createClient(supabaseUrl, supabaseKey, {
+      auth: {
+        persistSession: false,
+        autoRefreshToken: false,
+      },
+    })
 
     // Insert contact message
     const { data, error } = await supabase
@@ -65,6 +83,18 @@ export async function submitContactForm(
         success: false,
         error: "Failed to send message. Please try again or contact me directly via email.",
       }
+    }
+
+    // Send email notification (don't fail if email fails - message is already saved)
+    try {
+      await sendContactEmail({
+        name: name.trim(),
+        email: email.trim(),
+        message: message.trim(),
+      })
+    } catch (emailError) {
+      // Log but don't fail - message is already saved to database
+      console.error("Email notification failed:", emailError)
     }
 
     return { success: true }

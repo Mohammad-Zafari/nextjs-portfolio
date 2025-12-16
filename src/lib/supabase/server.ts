@@ -1,5 +1,6 @@
+import "server-only"
+
 import { createClient } from "@supabase/supabase-js"
-import { cookies } from "next/headers"
 
 /**
  * Creates a Supabase client for server-side operations
