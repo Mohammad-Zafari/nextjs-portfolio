@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { cn } from "@/lib/utils"
+import { submitContactForm } from "@/app/contact/actions"
 
 interface FormData {
   name: string
@@ -67,14 +68,19 @@ export function ContactForm() {
     setStatus("loading")
 
     try {
-      // TODO: Replace with Supabase integration
-      await new Promise((resolve) => setTimeout(resolve, 1500))
+      // Submit to Supabase via server action
+      const result = await submitContactForm({
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+      })
 
-      if (Math.random() > 0.1) {
+      if (result.success) {
         setStatus("success")
         setFormData({ name: "", email: "", message: "" })
       } else {
-        throw new Error("Failed to send message")
+        setStatus("error")
+        setErrorMessage(result.error || "Failed to send message. Please try again.")
       }
     } catch (error) {
       setStatus("error")
