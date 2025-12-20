@@ -51,9 +51,13 @@ export async function submitContactForm(
     const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
 
     if (!supabaseUrl || !supabaseKey) {
+      console.error("Missing Supabase configuration:", {
+        hasUrl: !!supabaseUrl,
+        hasKey: !!supabaseKey,
+      })
       return {
         success: false,
-        error: "Server configuration error. Please contact me directly via email.",
+        error: "Server configuration error. Please contact me directly via email at my.mohammad.zafari@gmail.com",
       }
     }
 
