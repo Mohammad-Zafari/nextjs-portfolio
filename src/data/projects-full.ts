@@ -27,58 +27,68 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: "1",
-    title: "E-Commerce Platform",
+    title: "Collaborative Whiteboard",
     description:
-      "Built a full-stack e-commerce solution with real-time inventory management and payment processing.",
+      "Built a real-time collaborative whiteboard with infinite canvas, drawing tools, and live cursor tracking for seamless team collaboration.",
     problem:
-      "Small businesses needed an affordable, scalable platform to sell online without complex setup. Existing solutions were either too expensive or lacked essential features like real-time inventory tracking.",
+      "Remote teams needed an intuitive, real-time visual collaboration tool for brainstorming and design sessions. Existing solutions were either too complex, lacked real-time features, or had poor UX.",
     solution:
-      "Developed a modern, serverless e-commerce platform with automated inventory management, integrated payment processing, and an intuitive admin dashboard. The platform scales automatically and reduces operational costs by 60%.",
-    techStack: ["Next.js", "Supabase", "Stripe", "TypeScript", "Tailwind CSS"],
-    slug: "ecommerce-platform",
+      "Developed a modern, real-time whiteboard with comprehensive drawing tools, infinite canvas, and live collaboration features. Implemented professional UI/UX with glass morphism, animations, and a complete design system. Teams can draw, share, and collaborate instantly with no learning curve.",
+    techStack: ["Next.js", "Supabase Realtime", "TypeScript", "Tailwind CSS", "Zustand", "Canvas API"],
+    slug: "collaborative-whiteboard",
     featured: true,
     architecture: {
       overview:
-        "Built on Next.js 14 with App Router for optimal performance and SEO. Supabase handles authentication, database, and real-time subscriptions. Stripe integration manages secure payment processing.",
+        "Built with Next.js 15 and Supabase Realtime for instant multi-user synchronization. Canvas API handles drawing operations, Zustand manages application state, and a custom design system ensures consistent UI/UX across all components.",
       components: [
-        "Next.js App Router for server-side rendering and API routes",
-        "Supabase PostgreSQL for product catalog and order management",
-        "Supabase Realtime for live inventory updates",
-        "Stripe Checkout for secure payment processing",
-        "Server Actions for form submissions and mutations",
-        "React Server Components for improved performance",
+        "Next.js App Router with real-time streaming",
+        "Supabase Realtime for instant stroke synchronization",
+        "Custom Canvas renderer with zoom and pan controls",
+        "Zustand for efficient state management",
+        "Resizable panels with glass morphism design",
+        "Keyboard shortcuts system for power users",
+        "Export functionality (PNG/SVG/JSON)",
+        "Live cursor tracking with user presence",
       ],
     },
     challenges: [
       {
-        title: "Real-time Inventory Synchronization",
+        title: "Real-time Stroke Synchronization",
         description:
-          "Multiple users could purchase the same item simultaneously, leading to overselling.",
+          "Multiple users drawing simultaneously caused conflicts and lag, with strokes appearing out of order or overlapping incorrectly.",
         solution:
-          "Implemented optimistic locking with Supabase Realtime subscriptions. Used database triggers to prevent overselling and notify users of stock changes instantly.",
+          "Implemented optimistic rendering with local state and server reconciliation. Used Supabase Realtime channels for instant stroke broadcasting with timestamp-based ordering. Added throttling for cursor movements to reduce bandwidth by 80%.",
       },
       {
-        title: "Payment Processing Security",
+        title: "Canvas Performance at Scale",
         description:
-          "Needed to handle sensitive payment information securely while maintaining a smooth checkout experience.",
+          "Canvas rendering became sluggish with 1000+ drawing elements, causing poor user experience and dropped frames.",
         solution:
-          "Integrated Stripe Checkout with webhook verification. All payment data stays on Stripe's servers, and we only store payment intent IDs and order status.",
+          "Optimized rendering with viewport culling (only draw visible elements), implemented layer caching for static elements, and used requestAnimationFrame for smooth 60fps rendering. Added element chunking for large boards.",
       },
       {
-        title: "Performance at Scale",
+        title: "Professional UI/UX Design",
         description:
-          "Initial load times were slow with large product catalogs affecting conversion rates.",
+          "Initial design looked basic and outdated, lacking the polish expected from modern SaaS products.",
         solution:
-          "Implemented incremental static regeneration (ISR) for product pages, image optimization with Next.js Image, and database query optimization with proper indexing.",
+          "Implemented comprehensive redesign with custom design system, CSS variables for theming, glass morphism effects, micro-interactions, and consistent animation system. Created keyboard shortcuts panel and improved all component layouts.",
+      },
+      {
+        title: "State Management Complexity",
+        description:
+          "Managing tool selection, drawing state, user presence, and canvas transforms across components was becoming unmaintainable.",
+        solution:
+          "Adopted Zustand for lightweight, performant state management. Created clear state slices for tools, strokes, shapes, text, and user presence. Implemented selective re-rendering to prevent unnecessary updates.",
       },
     ],
     results: [
-      { metric: "Page Load Time", value: "1.2s" },
-      { metric: "Conversion Rate", value: "+45%" },
-      { metric: "Cost Reduction", value: "60%" },
+      { metric: "Cursor Update Latency", value: "<50ms" },
+      { metric: "Canvas Performance", value: "60fps" },
+      { metric: "UI/UX Rating", value: "SaaS-level" },
+      { metric: "Concurrent Users", value: "100+ per room" },
     ],
-    timeline: "3 months",
-    role: "Full-stack Developer",
+    timeline: "2 months",
+    role: "Full-stack Developer & UI/UX Designer",
   },
   {
     id: "2",
