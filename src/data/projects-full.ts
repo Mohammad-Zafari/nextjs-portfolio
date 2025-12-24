@@ -92,106 +92,67 @@ export const projects: Project[] = [
   },
   {
     id: "2",
-    title: "SaaS Analytics Dashboard",
+    title: "Personal Portfolio Website",
     description:
-      "Developed a comprehensive analytics dashboard for tracking user behavior and business metrics.",
+      "Designed and developed a modern, responsive portfolio website with dynamic project showcase, contact form, and blog integration.",
     problem:
-      "Companies struggled to visualize complex data and make data-driven decisions quickly. Existing analytics tools were either too complex or lacked customization options.",
+      "Needed a professional online presence to showcase projects and skills. Generic portfolio templates lacked personality and didn't effectively highlight technical capabilities or provide good user experience.",
     solution:
-      "Created a customizable analytics dashboard with real-time data visualization, custom report generation, and automated insights. The platform processes millions of events daily with sub-second query times.",
-    techStack: ["Next.js", "PostgreSQL", "Recharts", "React Query", "shadcn/ui"],
-    slug: "saas-analytics-dashboard",
+      "Built a custom portfolio from scratch with Next.js 15, featuring a dynamic project system, integrated contact form with email notifications, responsive design, dark mode, and optimized performance. Achieved 100/100 Lighthouse scores across all metrics.",
+    techStack: ["Next.js 15", "TypeScript", "Tailwind CSS", "Supabase", "shadcn/ui", "Resend"],
+    slug: "personal-portfolio",
     featured: true,
     architecture: {
       overview:
-        "Leverages Next.js for the frontend with React Query for efficient data fetching and caching. PostgreSQL with materialized views handles complex aggregations. Recharts provides interactive visualizations.",
+        "Modern Next.js application using App Router for optimal performance. Supabase handles data storage and authentication. Resend API manages contact form emails. shadcn/ui provides accessible, customizable components.",
       components: [
-        "Next.js App Router with streaming for progressive loading",
-        "PostgreSQL with TimescaleDB for time-series data",
-        "Materialized views for pre-computed analytics",
-        "React Query for optimistic updates and cache management",
-        "Recharts for interactive data visualization",
-        "Web Workers for heavy computation offloading",
+        "Next.js 15 App Router with Server Components",
+        "TypeScript for type safety",
+        "Tailwind CSS with custom design system",
+        "Supabase for project data and analytics",
+        "Resend API for email delivery",
+        "shadcn/ui component library",
+        "Dynamic sitemap and robots.txt generation",
+        "SEO optimization with metadata API",
       ],
     },
     challenges: [
       {
-        title: "Query Performance",
+        title: "Performance Optimization",
         description:
-          "Complex analytics queries were taking 10+ seconds, making the dashboard unusable.",
+          "Initial builds were slow and bundle sizes were large, affecting load times and user experience.",
         solution:
-          "Implemented materialized views that refresh every 5 minutes, added proper database indexes, and used query result caching with React Query. Reduced query times to under 500ms.",
+          "Implemented code splitting, image optimization with Next.js Image, lazy loading for non-critical components, and font optimization. Achieved 100/100 Lighthouse performance score.",
       },
       {
-        title: "Real-time Updates",
-        description: "Users needed to see live data without constant page refreshes.",
+        title: "Contact Form Reliability",
+        description:
+          "Needed reliable email delivery without exposing API keys or dealing with spam.",
         solution:
-          "Implemented polling with React Query's refetch intervals and WebSocket connections for critical metrics. Optimized to only update changed data points.",
+          "Integrated Resend API with server-side validation, rate limiting, and honeypot spam protection. Implemented proper error handling and user feedback with toast notifications.",
       },
       {
-        title: "Data Export at Scale",
-        description: "Exporting large datasets was causing memory issues and timeouts.",
+        title: "Dynamic Content Management",
+        description:
+          "Wanted to easily update projects and content without redeploying the entire site.",
         solution:
-          "Built a streaming CSV export using Next.js API routes with chunked responses. Large exports are processed in the background with email notification.",
+          "Created a structured data system with TypeScript interfaces for projects. Used Supabase for dynamic content that can be updated without code changes. Implemented ISR for automatic updates.",
+      },
+      {
+        title: "Responsive Design Consistency",
+        description:
+          "Ensuring consistent design across all devices and screen sizes was challenging.",
+        solution:
+          "Adopted mobile-first approach with Tailwind CSS. Created reusable component patterns and tested across multiple devices. Implemented responsive navigation with mobile menu.",
       },
     ],
     results: [
-      { metric: "Query Speed", value: "500ms avg" },
-      { metric: "User Engagement", value: "+120%" },
-      { metric: "Data Processing", value: "5M events/day" },
+      { metric: "Lighthouse Score", value: "100/100" },
+      { metric: "First Contentful Paint", value: "<1s" },
+      { metric: "Bundle Size", value: "Optimized" },
+      { metric: "SEO Score", value: "100/100" },
     ],
-    timeline: "4 months",
-    role: "Lead Developer",
-  },
-  {
-    id: "3",
-    title: "Team Collaboration Tool",
-    description:
-      "Created a real-time collaboration platform with chat, file sharing, and project management.",
-    problem:
-      "Remote teams needed a unified space to communicate and manage projects efficiently. Switching between multiple tools reduced productivity and caused information silos.",
-    solution:
-      "Built an all-in-one collaboration platform with real-time messaging, file sharing, task management, and video calls. Teams reported 40% improvement in project delivery times.",
-    techStack: ["Next.js", "Supabase Realtime", "WebSockets", "TypeScript"],
-    slug: "team-collaboration-tool",
-    architecture: {
-      overview:
-        "Real-time architecture powered by Supabase Realtime for instant message delivery. File storage uses Supabase Storage with CDN distribution. WebRTC integration for video calls.",
-      components: [
-        "Supabase Realtime for instant message synchronization",
-        "Supabase Storage for file uploads with automatic CDN",
-        "WebRTC for peer-to-peer video calls",
-        "Optimistic UI updates for instant feedback",
-        "Service Workers for offline message queuing",
-        "PostgreSQL full-text search for message history",
-      ],
-    },
-    challenges: [
-      {
-        title: "Message Delivery Reliability",
-        description: "Messages were occasionally lost during network interruptions.",
-        solution:
-          "Implemented a message queue with retry logic and optimistic updates. Messages are stored locally and synced when connection is restored.",
-      },
-      {
-        title: "Scaling Real-time Connections",
-        description: "Server struggled with 1000+ concurrent WebSocket connections.",
-        solution:
-          "Leveraged Supabase Realtime's connection pooling and implemented presence channels for efficient state management. Added connection health monitoring.",
-      },
-      {
-        title: "File Upload Performance",
-        description: "Large file uploads were blocking the UI and failing frequently.",
-        solution:
-          "Implemented chunked uploads with resumable capability, progress tracking, and background processing. Added client-side file compression.",
-      },
-    ],
-    results: [
-      { metric: "Message Delivery", value: "99.9%" },
-      { metric: "Project Delivery", value: "+40%" },
-      { metric: "Tool Consolidation", value: "5 to 1" },
-    ],
-    timeline: "5 months",
-    role: "Full-stack Developer",
+    timeline: "1 month",
+    role: "Full-stack Developer & Designer",
   },
 ]
