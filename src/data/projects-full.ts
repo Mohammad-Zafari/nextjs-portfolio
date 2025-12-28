@@ -104,7 +104,7 @@ export const projects: Project[] = [
     techStack: ["Next.js 15", "TypeScript", "Tailwind CSS", "Supabase", "shadcn/ui", "Resend"],
     slug: "personal-portfolio",
     featured: true,
-    websiteUrl: "https://your-portfolio-example.vercel.app",
+    websiteUrl: "https://nextjs-portfolio-beta-red.vercel.app",
     architecture: {
       overview:
         "Modern Next.js application using App Router for optimal performance. Supabase handles data storage and authentication. Resend API manages contact form emails. shadcn/ui provides accessible, customizable components.",
