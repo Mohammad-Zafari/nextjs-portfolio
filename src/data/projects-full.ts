@@ -7,6 +7,7 @@ export interface Project {
   techStack: string[]
   slug: string
   featured?: boolean
+  websiteUrl?: string
   architecture: {
     overview: string
     components: string[]
@@ -37,6 +38,7 @@ export const projects: Project[] = [
     techStack: ["Next.js", "Supabase Realtime", "TypeScript", "Tailwind CSS", "Zustand", "Canvas API"],
     slug: "collaborative-whiteboard",
     featured: true,
+    websiteUrl: "https://collaborative-whiteboard-example.vercel.app",
     architecture: {
       overview:
         "Built with Next.js 15 and Supabase Realtime for instant multi-user synchronization. Canvas API handles drawing operations, Zustand manages application state, and a custom design system ensures consistent UI/UX across all components.",
@@ -102,6 +104,7 @@ export const projects: Project[] = [
     techStack: ["Next.js 15", "TypeScript", "Tailwind CSS", "Supabase", "shadcn/ui", "Resend"],
     slug: "personal-portfolio",
     featured: true,
+    websiteUrl: "https://your-portfolio-example.vercel.app",
     architecture: {
       overview:
         "Modern Next.js application using App Router for optimal performance. Supabase handles data storage and authentication. Resend API manages contact form emails. shadcn/ui provides accessible, customizable components.",
