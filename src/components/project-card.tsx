@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { ArrowUpRight } from "lucide-react"
+import { ArrowUpRight, ExternalLink } from "lucide-react"
 import type { Project } from "@/data/projects-full"
 
 interface ProjectCardProps {
@@ -53,6 +53,22 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
             </span>
           )}
         </div>
+
+        {/* Website URL */}
+        {project.websiteUrl && (
+          <a
+            href={project.websiteUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={(e) => e.stopPropagation()}
+            className="mb-4 flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-primary"
+          >
+            <ExternalLink className="h-4 w-4" />
+            <span className="truncate font-mono text-xs underline decoration-dotted underline-offset-2">
+              {project.websiteUrl}
+            </span>
+          </a>
+        )}
 
         {/* CTA */}
         <div className="flex items-center gap-2 text-sm font-medium text-primary">
