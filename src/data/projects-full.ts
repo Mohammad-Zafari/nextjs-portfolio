@@ -38,7 +38,7 @@ export const projects: Project[] = [
     techStack: ["Next.js", "Supabase Realtime", "TypeScript", "Tailwind CSS", "Zustand", "Canvas API"],
     slug: "collaborative-whiteboard",
     featured: true,
-    websiteUrl: "https://collaborative-whiteboard-example.vercel.app",
+    websiteUrl: "https://collaborative-whiteboard-59mgjpuvc.vercel.app",
     architecture: {
       overview:
         "Built with Next.js 15 and Supabase Realtime for instant multi-user synchronization. Canvas API handles drawing operations, Zustand manages application state, and a custom design system ensures consistent UI/UX across all components.",
