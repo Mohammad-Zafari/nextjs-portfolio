@@ -1,3 +1,5 @@
+"use client"
+
 import Link from "next/link"
 import { ArrowUpRight, ExternalLink } from "lucide-react"
 import type { Project } from "@/data/projects-full"
