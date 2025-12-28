@@ -83,6 +83,21 @@ export default function ProjectPage({ params }: ProjectPageProps) {
               </span>
             ))}
           </div>
+
+          {/* Website Link */}
+          {project.websiteUrl && (
+            <div className="mt-6">
+              <a
+                href={project.websiteUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-all hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/20"
+              >
+                Visit Live Website
+                <ArrowUpRight className="h-4 w-4" />
+              </a>
+            </div>
+          )}
         </header>
 
         {/* Content */}
