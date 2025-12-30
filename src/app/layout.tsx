@@ -6,19 +6,22 @@ import { ThemeProvider } from "@/components/theme-provider"
 
 export const metadata: Metadata = {
   title: {
-    default: "Portfolio | Full-Stack Developer",
+    default: "Portfolio | Frontend Developer",
     template: "%s | Portfolio",
   },
   description:
-    "Full-stack developer specializing in production-ready SaaS applications with Next.js, TypeScript, and Supabase.",
+    "Frontend developer with backend experience, specializing in production-ready SaaS applications with Next.js, TypeScript, and AI-powered development tools like Cursor and Claude.",
   keywords: [
     "Next.js",
     "React",
     "TypeScript",
-    "Supabase",
-    "Full-stack Developer",
+    "Frontend Developer",
     "SaaS",
     "Web Development",
+    "Cursor AI",
+    "Claude AI",
+    "AI Code Editor",
+    "Tailwind CSS",
   ],
   authors: [{ name: "Portfolio" }],
   creator: "Portfolio",
@@ -26,15 +29,15 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     siteName: "Portfolio",
-    title: "Portfolio | Full-Stack Developer",
+    title: "Portfolio | Frontend Developer",
     description:
-      "Full-stack developer specializing in production-ready SaaS applications with Next.js, TypeScript, and Supabase.",
+      "Frontend developer with backend experience, specializing in production-ready SaaS applications with Next.js, TypeScript, and AI-powered development tools.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Portfolio | Full-Stack Developer",
+    title: "Portfolio | Frontend Developer",
     description:
-      "Full-stack developer specializing in production-ready SaaS applications with Next.js, TypeScript, and Supabase.",
+      "Frontend developer with backend experience, specializing in production-ready SaaS applications with Next.js, TypeScript, and AI-powered development tools.",
   },
 }
 

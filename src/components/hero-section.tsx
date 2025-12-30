@@ -31,8 +31,8 @@ export function HeroSection() {
 
           {/* Subheading */}
           <p className="animate-in-delay-2 mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground md:text-xl">
-            Full-stack developer specializing in building production-ready SaaS applications with
-            Next.js, TypeScript, and Supabase.
+            Frontend developer with backend experience, specializing in building production-ready SaaS applications with
+            Next.js, TypeScript, and modern AI-powered development tools like Cursor and Claude.
           </p>
 
           {/* CTA Buttons */}
@@ -85,7 +85,7 @@ export function HeroSection() {
             Tech I work with
           </p>
           <div className="flex flex-wrap gap-2 lg:flex-col lg:items-end">
-            {["Next.js", "TypeScript", "React", "Supabase", "Tailwind"].map((tech) => (
+            {["Next.js", "TypeScript", "React", "Tailwind", "Cursor AI"].map((tech) => (
               <span
                 key={tech}
                 className="rounded-full border bg-card px-3 py-1.5 text-sm font-medium transition-colors hover:border-primary/50"

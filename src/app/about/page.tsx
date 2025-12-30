@@ -3,7 +3,7 @@ import { Code2, Zap, Users, Rocket, CheckCircle2 } from "lucide-react"
 export const metadata = {
   title: "About",
   description:
-    "Full-stack developer specializing in production-ready SaaS applications with Next.js and Supabase.",
+    "Frontend developer with backend experience, specializing in production-ready SaaS applications with Next.js and modern AI development tools.",
 }
 
 const techStack = {
@@ -12,11 +12,18 @@ const techStack = {
     { name: "TypeScript", desc: "Type safety" },
     { name: "Tailwind CSS", desc: "Styling" },
     { name: "shadcn/ui", desc: "Components" },
+    { name: "React", desc: "UI library" },
   ],
   backend: [
     { name: "Supabase", desc: "BaaS" },
     { name: "PostgreSQL", desc: "Database" },
-    { name: "Stripe", desc: "Payments" },
+    { name: "Node.js", desc: "Runtime" },
+    { name: "REST APIs", desc: "Integration" },
+  ],
+  tools: [
+    { name: "Cursor AI", desc: "AI code editor" },
+    { name: "Claude", desc: "AI assistant" },
+    { name: "Git", desc: "Version control" },
     { name: "Vercel", desc: "Deployment" },
   ],
 }
@@ -25,7 +32,7 @@ const values = [
   {
     icon: Rocket,
     title: "Speed to Market",
-    desc: "Ship MVPs in weeks, not months. Fast iteration based on real feedback.",
+    desc: "Ship MVPs in weeks, not months using AI-powered development tools for faster iteration.",
   },
   {
     icon: Code2,
@@ -34,8 +41,8 @@ const values = [
   },
   {
     icon: Zap,
-    title: "Performance First",
-    desc: "Optimized for speed and user experience from day one.",
+    title: "AI-Enhanced Development",
+    desc: "Leveraging Cursor and Claude AI to deliver high-quality code efficiently.",
   },
   {
     icon: Users,
@@ -57,8 +64,8 @@ export default function AboutPage() {
             Building digital products that <span className="gradient-text">make a difference</span>
           </h1>
           <p className="animate-in-delay-2 mt-6 text-lg leading-relaxed text-muted-foreground">
-            I&apos;m a full-stack developer focused on creating production-ready SaaS applications. I
-            transform complex ideas into elegant, scalable solutions that drive business growth.
+            I&apos;m a frontend developer with backend experience, focused on creating production-ready SaaS applications. I
+            transform complex ideas into elegant, scalable solutions that drive business growth. I leverage modern AI code editors like Cursor and Claude to deliver high-quality code faster and more efficiently.
           </p>
         </div>
 
@@ -90,10 +97,10 @@ export default function AboutPage() {
         {/* Tech Stack */}
         <section className="mb-20">
           <h2 className="mb-8 text-2xl font-bold">Tech stack</h2>
-          <div className="grid gap-6 md:grid-cols-2">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             <div className="rounded-2xl border bg-card p-8">
               <h3 className="mb-6 text-sm font-medium uppercase tracking-wider text-muted-foreground">
-                Frontend
+                Frontend (Primary)
               </h3>
               <div className="space-y-4">
                 {techStack.frontend.map((tech) => (
@@ -106,10 +113,23 @@ export default function AboutPage() {
             </div>
             <div className="rounded-2xl border bg-card p-8">
               <h3 className="mb-6 text-sm font-medium uppercase tracking-wider text-muted-foreground">
-                Backend & Services
+                Backend (Experience)
               </h3>
               <div className="space-y-4">
                 {techStack.backend.map((tech) => (
+                  <div key={tech.name} className="flex items-center justify-between">
+                    <span className="font-medium">{tech.name}</span>
+                    <span className="text-sm text-muted-foreground">{tech.desc}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="rounded-2xl border bg-card p-8 md:col-span-2 lg:col-span-1">
+              <h3 className="mb-6 text-sm font-medium uppercase tracking-wider text-muted-foreground">
+                AI & Tools
+              </h3>
+              <div className="space-y-4">
+                {techStack.tools.map((tech) => (
                   <div key={tech.name} className="flex items-center justify-between">
                     <span className="font-medium">{tech.name}</span>
                     <span className="text-sm text-muted-foreground">{tech.desc}</span>
